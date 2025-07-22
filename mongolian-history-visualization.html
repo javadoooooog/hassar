@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乡村振兴历史地理课 - 漠南蒙古</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #3498db, #e74c3c);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 40px 0;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-date {
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .timeline-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .timeline-text {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .tribes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .tribe-card {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .tribe-card:hover {
+            transform: scale(1.05);
+        }
+
+        .tribe-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .pairing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .pairing-table th,
+        .pairing-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pairing-table th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        .pairing-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .nav-buttons {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 12px;
+        }
+
+        .nav-btn:hover {
+            background: #2980b9;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 40px);
+                left: 40px !important;
+                text-align: left !important;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .nav-buttons {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏛️ 乡村振兴历史地理课</h1>
+            <p>漠南蒙古历史文化探索之旅</p>
+        </div>
+
+        <div class="section" id="introduction">
+            <h2>📖 课程简介</h2>
+            <p>漠南蒙古、漠西蒙古和漠北蒙古是明朝末年蒙古各部落分裂成三部分之后，出现的地域和部族概念，沿用至清朝末年。其中漠南蒙古即如今的内蒙古东部地区，也是绝大多数京蒙帮扶结对旗县所在的地方（共31个）。</p>
+            <div class="highlight">
+                <strong>重点关注：</strong>科尔沁部、察哈尔部 - 这两个部落在蒙东地区历史中具有重要地位
+            </div>
+        </div>
+
+        <div class="section" id="origins">
+            <h2>🌟 蒙古族的起源</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">公元前209年</div>
+                        <div class="timeline-title">东胡败于匈奴</div>
+                        <div class="timeline-text">东胡被匈奴冒顿单于击败，东胡各部受匈奴人统治达3个世纪之久。同年陈胜吴广起义，刘邦项羽揭竿而起。</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">公元1-2世纪</div>
+                        <div class="timeline-title">鲜卑崛起</div>
+                        <div class="timeline-text">汉朝击败匈奴，东汉窦宪在今蒙古国杭爱山刻石纪功。鲜卑人占据匈奴土地，其中拓跋鲜卑建立北魏王朝，统治中国北方148年。</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">公元388年</div>
+                        <div class="timeline-title">契丹分离</div>
+                        <div class="timeline-text">鲜卑宇文部的一支自号契丹。500年后，耶律阿保机建立大辽王朝，设五京道，统治中国北方209年。</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">公元1162年</div>
+                        <div class="timeline-title">成吉思汗诞生</div>
+                        <div class="timeline-text">在蒙古乞颜部儿只斤氏贵族家庭里出生了铁木真，后来统一草原各部，1206年加号"成吉思汗"。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="tribes">
+            <h2>🏹 重要部落介绍</h2>
+            <div class="tribes-grid">
+                <div class="tribe-card">
+                    <h3>科尔沁部</h3>
+                    <p><strong>起源：</strong>成吉思汗长弟哈萨尔分得额尔古纳河与呼伦湖间的领地</p>
+                    <p><strong>含义：</strong>蒙古语意为"带弓箭的人"</p>
+                    <p><strong>特点：</strong>善于骑射，负责管理成吉思汗的护卫军</p>
+                    <p><strong>现状：</strong>占据我国蒙古族人口的一半以上</p>
+                </div>
+
+                <div class="tribe-card">
+                    <h3>察哈尔部</h3>
+                    <p><strong>地位：</strong>北元时期蒙古大汗的直属部落，号称中央部落</p>
+                    <p><strong>起源：</strong>成吉思汗从各部落抽调精兵强将组成的卫戍部队</p>
+                    <p><strong>含义：</strong>可能源于波斯语，意为"家人、奴仆、卫士"</p>
+                    <p><strong>历史：</strong>明清时期与清军交战30年，元气大伤后归顺</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="distribution">
+            <h2>🗺️ 现代分布</h2>
+            <h3>科尔沁部后裔分布：</h3>
+            <ul>
+                <li><strong>嫩科尔沁：</strong>兴安盟科右前旗、科右中旗、扎赉特旗</li>
+                <li><strong>通辽地区：</strong>科左中旗、科左后旗</li>
+                <li><strong>迁移分支：</strong>巴彦淖尔乌拉特三旗、包头达尔罕茂明安联合旗、乌兰察布四子王旗、赤峰阿鲁科尔沁旗</li>
+                <li><strong>其他地区：</strong>黑龙江杜尔伯特蒙古族自治县、吉林郭尔罗斯蒙古族自治县、青海省内绝大多数蒙古族自治县</li>
+            </ul>
+
+            <h3>察哈尔部后裔分布：</h3>
+            <ul>
+                <li><strong>主要分布：</strong>锡林郭勒盟、乌兰察布市</li>
+                <li><strong>具体地区：</strong>正镶黄旗、正镶白旗、正镶蓝旗、太仆寺旗、乌珠穆沁两旗、苏尼特两旗、察哈尔右翼三旗等</li>
+                <li><strong>其他地区：</strong>河北张家口、新疆博乐市、温泉县</li>
+            </ul>
+        </div>
+
+        <div class="section" id="pairing">
+            <h2>🤝 京蒙结对关系</h2>
+            <p class="highlight">1947年5月1日，在科右前旗的王爷庙（今兴安盟乌兰浩特市），内蒙古自治区政府宣告成立，乌兰夫当选为自治政府主席。</p>
+            
+            <table class="pairing-table">
+                <thead>
+                    <tr>
+                        <th>北京区县</th>
+                        <th>内蒙古结对地区</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>东城区</td><td>乌兰察布市化德县、兴安盟阿尔山市</td></tr>
+                    <tr><td>西城区</td><td>赤峰市喀喇沁旗、呼伦贝尔市鄂伦春自治旗</td></tr>
+                    <tr><td>朝阳区</td><td>乌兰察布市卓资县、察哈尔右翼后旗、通辽市科尔沁左翼后旗</td></tr>
+                    <tr><td>海淀区</td><td>赤峰市敖汉旗、兴安盟科尔沁右翼前旗、科尔沁右翼中旗</td></tr>
+                    <tr><td>丰台区</td><td>赤峰市林西县、兴安盟扎赉特旗</td></tr>
+                    <tr><td>石景山区</td><td>赤峰市宁城县、呼伦贝尔市莫力达瓦达斡尔族自治旗</td></tr>
+                    <tr><td>门头沟区</td><td>呼和浩特市武川县</td></tr>
+                    <tr><td>房山区</td><td>乌兰察布市察哈尔右翼中旗、兴安盟突泉县</td></tr>
+                    <tr><td>通州区</td><td>赤峰市翁牛特旗、通辽市奈曼旗</td></tr>
+                    <tr><td>顺义区</td><td>赤峰市巴林左旗、通辽市科尔沁左翼中旗</td></tr>
+                    <tr><td>大兴区</td><td>乌兰察布市察哈尔右翼前旗、锡林郭勒盟正镶白旗</td></tr>
+                    <tr><td>昌平区</td><td>赤峰市阿鲁科尔沁旗、锡林郭勒盟太仆寺旗</td></tr>
+                    <tr><td>平谷区</td><td>乌兰察布市商都县</td></tr>
+                    <tr><td>怀柔区</td><td>乌兰察布市四子王旗</td></tr>
+                    <tr><td>密云区</td><td>通辽市库伦旗</td></tr>
+                    <tr><td>延庆区</td><td>乌兰察布市兴和县</td></tr>
+                    <tr><td>北京经济技术开发区</td><td>锡林郭勒盟苏尼特右旗、赤峰市巴林右旗</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="nav-btn" onclick="scrollToSection('introduction')">简介</button>
+        <button class="nav-btn" onclick="scrollToSection('origins')">起源</button>
+        <button class="nav-btn" onclick="scrollToSection('tribes')">部落</button>
+        <button class="nav-btn" onclick="scrollToSection('distribution')">分布</button>
+        <button class="nav-btn" onclick="scrollToSection('pairing')">结对</button>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // 添加滚动动画效果
+        window.addEventListener('scroll', () => {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // 初始化动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(50px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+        });
+    </script>
+</body>
+</html>

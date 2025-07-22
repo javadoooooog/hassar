@@ -1,0 +1,13 @@
+{
+  "name": "mongolian-history-visualization",
+  "version": "1.0.0",
+  "description": "蒙古历史文化可视化展示网站",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site, no build needed'",
+    "start": "echo 'Static site deployed'"
+  },
+  "keywords": ["mongolian", "history", "visualization", "culture"],
+  "author": "",
+  "license": "ISC"
+}

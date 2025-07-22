@@ -1,0 +1,8 @@
+header
+logo
+other
+content-box
+verify-img-out
+verify-img-panel
+verify-refresh
+verify-bar-area

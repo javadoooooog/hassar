@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Knowledge Graph</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style type="text/css">
+        #mynetwork {
+            width: 100%;
+            height: 95vh;
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+    const nodes = new vis.DataSet([{"id":"ai-vs-human-thinking-weread","label":"ai-vs-human-thinking-weread","type":"viewpoint"},{"id":"“我与我”和“我与他人”的优先级是动态变化的","label":"“我与我”和“我与他人”的优先级是动态变化的","type":"viewpoint"},{"id":"人机协同的落地策略","label":"人机协同的落地策略","type":"viewpoint"},{"id":"平谷智慧作业项目梳理和展望","label":"平谷智慧作业项目梳理和展望","type":"viewpoint"},{"id":"论语是中国人的圣经","label":"论语是中国人的圣经","type":"viewpoint"}]);
+    const edges = new vis.DataSet([]);
+
+    const container = document.getElementById('mynetwork');
+    const data = {
+        nodes: nodes,
+        edges: edges
+    };
+    const options = {
+        nodes: {
+            shape: 'box',
+            margin: 10,
+            widthConstraint: {
+                maximum: 200
+            }
+        },
+        edges: {
+            arrows: 'to'
+        },
+        physics: {
+            barnesHut: {
+                gravitationalConstant: -30000,
+                centralGravity: 0.3,
+                springLength: 200,
+                springConstant: 0.04,
+                damping: 0.09,
+                avoidOverlap: 0.1
+            },
+            maxVelocity: 50,
+            minVelocity: 0.1,
+            solver: 'barnesHut',
+            stabilization: {
+                iterations: 1000
+            }
+        }
+    };
+
+    const network = new vis.Network(container, data, options);
+</script>
+
+</body>
+</html>
+        

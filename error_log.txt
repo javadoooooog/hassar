@@ -1,0 +1,143 @@
+Error searching account 海亮教育:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 微言教育:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 多知:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account e2lab:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 中国教育信息化:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 智学网:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 科大讯飞江苏分公司:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 学科网:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 洋葱卓越教师:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 科大讯飞:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 和气聚力教育科技:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 十六进制智慧教学:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
+Error searching account 云思智学智慧教育:
+Error: Could not find Chrome (ver. 127.0.6533.88). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Kanyun\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:291:27)
+    at ChromeLauncher.executablePath (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:209:25)
+    at ChromeLauncher.computeLaunchArguments (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ChromeLauncher.js:89:37)
+    at async ChromeLauncher.launch (D:\Mirrors\node_modules\.pnpm\puppeteer-core@22.15.0\node_modules\puppeteer-core\lib\cjs\puppeteer\node\ProductLauncher.js:70:28)
+    at async searchWeChatArticles (D:\Mirrors\temp_search.js:33:29)
+
