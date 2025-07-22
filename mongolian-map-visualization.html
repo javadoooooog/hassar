@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙古部落地理分布示意图</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(to bottom, #87CEEB 0%, #98FB98 50%, #F4A460 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .region {
+            position: absolute;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .region:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mobei {
+            top: 10%;
+            left: 20%;
+            width: 60%;
+            height: 25%;
+            background: linear-gradient(45deg, #4CAF50, #66BB6A);
+        }
+        
+        .monan {
+            top: 40%;
+            left: 15%;
+            width: 70%;
+            height: 30%;
+            background: linear-gradient(45deg, #FF9800, #FFB74D);
+        }
+        
+        .moxi {
+            top: 15%;
+            left: 5%;
+            width: 25%;
+            height: 60%;
+            background: linear-gradient(45deg, #9C27B0, #BA68C8);
+        }
+        
+        .tribe {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #e74c3c;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tribe:hover {
+            transform: scale(2);
+            background: #c0392b;
+        }
+        
+        .tribe::after {
+            content: attr(data-name);
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .tribe:hover::after {
+            opacity: 1;
+        }
+        
+        .legend {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .legend-item {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #007bff;
+        }
+        
+        .legend-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .legend-content {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .region-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            max-width: 200px;
+        }
+        
+        .region:hover + .region-info,
+        .region-info:hover {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .map-container {
+                height: 400px;
+            }
+            
+            .legend {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ 蒙古部落地理分布示意图</h1>
+        
+        <div class="map-container">
+            <!-- 三大蒙古地区 -->
+            <div class="region mobei" data-region="mobei">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5em;">漠北蒙古</div>
+                    <div style="font-size: 0.9em; margin-top: 5px;">喀尔喀蒙古</div>
+                </div>
+            </div>
+            
+            <div class="region monan" data-region="monan">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5em;">漠南蒙古</div>
+                    <div style="font-size: 0.9em; margin-top: 5px;">内蒙古地区</div>
+                </div>
+            </div>
+            
+            <div class="region moxi" data-region="moxi">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.2em;">漠西蒙古</div>
+                    <div style="font-size: 0.8em; margin-top: 5px;">卫拉特蒙古</div>
+                </div>
+            </div>
+            
+            <!-- 主要部落标记点 - 根据历史地理位置校准 -->
+            <!-- 漠南蒙古部落 -->
+            <div class="tribe" style="top: 65%; left: 75%;" data-name="科尔沁部" title="嫩江流域，今通辽、兴安盟一带"></div>
+            <div class="tribe" style="top: 70%; left: 50%;" data-name="察哈尔部" title="张家口北部、锡林郭勒南部一带"></div>
+            <div class="tribe" style="top: 75%; left: 40%;" data-name="土默特部" title="呼和浩特为中心的土默川平原"></div>
+            <div class="tribe" style="top: 68%; left: 65%;" data-name="敖汉部" title="今赤峰市敖汉旗一带"></div>
+            <div class="tribe" style="top: 72%; left: 70%;" data-name="奈曼部" title="今通辽市奈曼旗一带"></div>
+            
+            <!-- 漠北蒙古部落（今蒙古国境内） -->
+            <div class="tribe" style="top: 20%; left: 45%;" data-name="喀尔喀部" title="今蒙古国中部地区"></div>
+            <div class="tribe" style="top: 15%; left: 40%;" data-name="车臣汗部" title="今蒙古国东部"></div>
+            <div class="tribe" style="top: 18%; left: 50%;" data-name="土谢图汗部" title="今蒙古国中部"></div>
+            
+            <!-- 漠西蒙古部落（新疆、青海西部） -->
+            <div class="tribe" style="top: 25%; left: 15%;" data-name="准噶尔部" title="新疆准噶尔盆地"></div>
+            <div class="tribe" style="top: 40%; left: 8%;" data-name="和硕特部" title="青海湖周边地区"></div>
+            <div class="tribe" style="top: 30%; left: 5%;" data-name="土尔扈特部" title="新疆塔里木河流域"></div>
+            <div class="tribe" style="top: 35%; left: 12%;" data-name="杜尔伯特部" title="新疆北部阿尔泰地区"></div>
+            
+            <!-- 地理标识 -->
+            <div style="position: absolute; top: 8%; left: 8%; color: #2c3e50; font-weight: bold; font-size: 0.9em;">🏔️ 阿尔泰山</div>
+            <div style="position: absolute; top: 45%; left: 35%; color: #8b4513; font-weight: bold; font-size: 0.9em;">🏜️ 戈壁沙漠</div>
+            <div style="position: absolute; top: 10%; right: 8%; color: #2c3e50; font-weight: bold; font-size: 0.9em;">🌲 大兴安岭</div>
+            <div style="position: absolute; top: 85%; left: 45%; color: #2c3e50; font-weight: bold; font-size: 0.8em;">🏛️ 张家口</div>
+            <div style="position: absolute; top: 80%; left: 75%; color: #2c3e50; font-weight: bold; font-size: 0.8em;">🌾 嫩江流域</div>
+            <div style="position: absolute; top: 88%; left: 35%; color: #2c3e50; font-weight: bold; font-size: 0.8em;">🏙️ 呼和浩特</div>
+            <div style="position: absolute; top: 50%; left: 2%; color: #4169e1; font-weight: bold; font-size: 0.8em;">🌊 青海湖</div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-title">🌿 漠北蒙古（喀尔喀）</div>
+                <div class="legend-content">
+                    位于戈壁沙漠以北，主要包括今蒙古国地区。喀尔喀蒙古是漠北地区的主要部落，1691年归附清朝。地势以草原和山地为主，是传统的游牧区域。
+                </div>
+            </div>
+            
+            <div class="legend-item">
+                <div class="legend-title">🏛️ 漠南蒙古（内蒙古）</div>
+                <div class="legend-content">
+                    位于戈壁沙漠以南，包括今内蒙古自治区大部分地区。主要部落有科尔沁、察哈尔、土默特等，是最早归附清朝的蒙古地区（1636年）。
+                </div>
+            </div>
+            
+            <div class="legend-item">
+                <div class="legend-title">🏔️ 漠西蒙古（卫拉特）</div>
+                <div class="legend-content">
+                    位于阿尔泰山以西，包括今新疆北部和中亚部分地区。主要部落有准噶尔、和硕特等，1757年完全纳入清朝版图。地形复杂，有山地、盆地和草原。
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 添加交互效果
+        document.querySelectorAll('.region').forEach(region => {
+            region.addEventListener('click', function() {
+                const regionName = this.dataset.region;
+                let info = '';
+                
+                switch(regionName) {
+                    case 'mobei':
+                        info = '漠北蒙古：位于戈壁沙漠以北，以喀尔喀蒙古为主，1691年归附清朝。';
+                        break;
+                    case 'monan':
+                        info = '漠南蒙古：位于戈壁沙漠以南，包括科尔沁、察哈尔等部，1636年归附清朝。';
+                        break;
+                    case 'moxi':
+                        info = '漠西蒙古：位于阿尔泰山以西，以卫拉特蒙古为主，1757年纳入清朝版图。';
+                        break;
+                }
+                
+                alert(info);
+            });
+        });
+        
+        // 部落点击事件
+        document.querySelectorAll('.tribe').forEach(tribe => {
+            tribe.addEventListener('click', function() {
+                const tribeName = this.dataset.name;
+                let info = '';
+                
+                switch(tribeName) {
+                    case '科尔沁部':
+                        info = '科尔沁部：位于嫩江流域，今通辽市、兴安盟一带。16世纪初迁至此地，是漠南蒙古重要部落，以游牧和农业并重著称。';
+                        break;
+                    case '察哈尔部':
+                        info = '察哈尔部：蒙古黄金家族后裔，历史上驻牧于张家口北部、锡林郭勒盟南部、乌兰察布市南部一带，沿长城一线活动。';
+                        break;
+                    case '土默特部':
+                        info = '土默特部：位于今内蒙古中西部，以呼和浩特为中心的土默川平原，农牧结合发展，是较早定居的蒙古部落。';
+                        break;
+                    case '敖汉部':
+                        info = '敖汉部：位于今赤峰市敖汉旗一带，是漠南蒙古重要部落之一，历史上以游牧为主。';
+                        break;
+                    case '奈曼部':
+                        info = '奈曼部：位于今通辽市奈曼旗一带，与科尔沁部相邻，同属漠南蒙古东部地区。';
+                        break;
+                    case '喀尔喀部':
+                        info = '喀尔喀部：漠北蒙古主要部落，位于今蒙古国中部地区，1691年归附清朝，是蒙古国的主体民族。';
+                        break;
+                    case '车臣汗部':
+                        info = '车臣汗部：漠北蒙古四部之一，位于今蒙古国东部，是喀尔喀蒙古的重要组成部分。';
+                        break;
+                    case '土谢图汗部':
+                        info = '土谢图汗部：漠北蒙古四部之一，位于今蒙古国中部，历史上是喀尔喀蒙古的政治中心之一。';
+                        break;
+                    case '准噶尔部':
+                        info = '准噶尔部：漠西蒙古（卫拉特）主要部落，位于新疆准噶尔盆地，曾建立准噶尔汗国，1757年被清朝平定。';
+                        break;
+                    case '和硕特部':
+                        info = '和硕特部：漠西蒙古部落，主要分布在青海湖周边地区，曾在青海建立和硕特汗国。';
+                        break;
+                    case '土尔扈特部':
+                        info = '土尔扈特部：漠西蒙古部落，17世纪西迁至俄国伏尔加河流域，1771年东归回到新疆塔里木河流域。';
+                        break;
+                    case '杜尔伯特部':
+                        info = '杜尔伯特部：漠西蒙古四大部落之一，主要分布在新疆北部阿尔泰地区，是卫拉特蒙古的重要组成部分。';
+                        break;
+                    default:
+                        info = `${tribeName}：蒙古重要部落之一，在历史上发挥重要作用。`;
+                }
+                
+                alert(info);
+            });
+        });
+    </script>
+</body>
+</html>
